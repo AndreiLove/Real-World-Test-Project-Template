@@ -1,129 +1,271 @@
 <!DOCTYPE html>
+
+<!--
+
+    <html>: This tag starts the HTML document. It tells the browser, "Hey, this is an HTML document."
+    lang="en": This means the language of the document is English.
+    dir="ltr": This stands for "left to right," meaning the text direction is from left to right.
+    xmlns:v="urn:schemas-microsoft-com:vml" and xmlns:o="urn:schemas-microsoft-com:office:office": These are namespaces. They link to specific sets of rules that the document might use. It's like saying, "Here are some extra instructions from Microsoft for how to display this document."-->
+
 <html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<!--This tag starts the "head" section of the HTML document. The "head" contains information about the document that isn't directly visible on the webpage, like its title, styles, and metadata.-->
 <head>
+
+   <!--<meta>: This tag provides metadata, which is information about the webpage.
+http-equiv="Content-Type": This tells the browser what kind of content to expect. Here, it says the content is "text/html," meaning it's HTML code.
+charset="utf-8": This specifies the character encoding, or how characters (like letters and symbols) are stored. "UTF-8" is a common way to represent characters.-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--This line tells Internet Explorer to use the latest rendering engine. It's like saying, "Hey, Internet Explorer, use your most up-to-date features to display this page."-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!--name="viewport": This is about how the webpage should be displayed on different devices, like phones or computers.
+width=device-width": This means the page's width should match the width of the device it's being viewed on.
+initial-scale=1: This sets the initial zoom level of the page to 1, meaning no zoom.
+user-scalable=yes": This allows users to zoom in or out on the page.-->
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+<!--This line tells the browser not to automatically change things like phone numbers, dates, addresses, emails, or URLs into clickable links. It's like saying, "Leave these things as plain text."-->
    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+
+<!--This tells Apple devices not to automatically reformat the email's message when displayed. It helps keep the design consistent.-->
    <meta name="x-apple-disable-message-reformatting">
+
+<!--This line tells the browser that the page supports both light and dark color schemes. So, if the user has dark mode on, the page can adapt to that.-->
    <meta name="color-scheme" content="light dark">
+
+<!--This is similar to the previous line, confirming that both light and dark color schemes are supported by the webpage.-->
    <meta name="supported-color-schemes" content="light dark">
+
+
 	<title>Real World Test Project - Kasha Decor</title>
    <!-- ADD NECESSARY LINKS TO GOOGLE FONTS HERE -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-   <!--[if mso]>
-      <noscript>
-         <xml>
-            <o:OfficeDocumentSettings>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
+
+   
+   <!--[if mso]> This is a special kind of comment in HTML that only certain programs, like Microsoft Outlook, will pay attention to. It's like a secret message that only Outlook can read.
+      <noscript> This part is saying, "If there's no JavaScript running, use what's inside this tag." In this case, it’s not actually showing anything to the user; it’s just for Outlook to read.
+         <xml> This is like writing instructions in a different language called XML, which is used to give very specific instructions to certain programs, like Microsoft Office.
+            <o:OfficeDocumentSettings> This tag starts a set of instructions specifically for Microsoft Office documents. It’s like saying, "Here are some special rules for how to display this document in Microsoft Office."
+            <o:PixelsPerInch>96</o:PixelsPerInch> This line sets the resolution or clarity of the document to 96 pixels per inch. Pixels are tiny dots that make up the images and text on your screen. This is telling Microsoft Office how sharp or clear things should look.
          </xml>
-      </noscript>
+            </o:OfficeDocumentSettings> 
+      </noscript> 
    <![endif]-->
+
+
    <style type="text/css">
+
+/*table: This applies the rules inside the curly braces {} to all tables on the webpage.
+border-spacing: 0;: This means there’s no space between the borders of table cells.
+border-collapse: collapse;: This makes the borders of the table and its cells collapse into a single border instead of having double borders.*/
       table {
 			border-spacing: 0;
          border-collapse: collapse;
 		}
+
+/*td: This applies the rules to all table cells (called "td" in HTML) on the page.
+padding: 0;: This means there’s no extra space inside the table cells. Everything inside the cell is right up against the edge.*/
       td {
          padding: 0;
       }
+
+/*p: This applies the rules to all paragraphs (written with the <p> tag) on the page.
+font-size: 16px;: This sets the text size in paragraphs to 16 pixels, which is a typical size for easy reading.*/
       p {
          font-size: 16px;
       }
+
+/*img: This applies the rules to all images on the page.
+border: 0;: This means the images won’t have a border around them.*/
       img {
          border: 0;
       }
+
+/*a: This applies the rules to all links (written with the <a> tag) on the page.
+text-decoration: none;: This means the links won’t have underlines or other styles.
+color: #ffffff;: This sets the text color of the links to white.
+font-size: 16px;: This sets the text size of the links to 16 pixels.*/
       a {
          text-decoration: none;
          color: #ffffff;
          font-size: 16px;
       }
+
+/*.content: This applies the rules to any element with the class "content."
+line-height: 20px;: This sets the space between lines of text to 20 pixels.
+font-size: 16px;: This sets the text size to 16 pixels.*/
       .content {
          line-height: 20px;
          font-size: 16px;
       }
 
+/*.bluelink: This applies the rules to any element with the class "bluelink."
+text-decoration: none;: This means the links won’t have underlines or other styles.
+color: #3d3d3d !important;: This sets the text color to a dark gray color. The !important part makes sure this rule takes priority over others.*/
       .bluelink {
          text-decoration: none;
          color: #3d3d3d !important;
       }
 
+/*span.Object: This applies the rules to any text inside a <span> tag with the class "Object."
+color: inherit !important;: This means the text will inherit the color from its parent element, and the !important makes this rule take priority.*/
       span.Object {
          color: inherit !important;
       }
+
+/*span.Object-hover: This applies the rules to any text inside a <span> tag with the class "Object-hover."
+color: inherit !important;: Again, this makes the text inherit the color from its parent element.
+text-decoration: none !important;: This ensures that there’s no underline or other decoration on the text, even when hovering over it.*/
       span.Object-hover {
          color: inherit !important;
          text-decoration:none !important;
       }
-
+/*u + .body .gmail-blend-screen: This rule applies to elements with the class .gmail-blend-screen that are inside another element with the class .body, but only if there's a <u> element right before it. This is a very specific way to target certain parts of a webpage.
+background:#000;: This sets the background color of those elements to black (#000 means black in color codes).
+mix-blend-mode:screen;: This is a special effect that blends the black background with other colors on the page, making the element look lighter.*/
       u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
+
+/*u + .body .gmail-blend-difference: Similar to the first rule, but this one targets elements with the class .gmail-blend-difference.
+background:#000;: This also sets the background to black.
+mix-blend-mode:difference;: This blend mode makes the element’s color look different depending on what’s behind it, usually creating a high-contrast effect.*/
 		u + .body .gmail-blend-difference { background:#000; mix-blend-mode:difference; }
 
+
+/*.ExternalClass: This applies to any element with the class ExternalClass. This class is often used by email clients like Outlook to handle emails.
+width: 100%;: This makes the element take up the full width of its container.*/
       .ExternalClass {
          width: 100%;
       }
+
+/*.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div: This rule applies to elements with the class ExternalClass, as well as any paragraphs (p), spans (span), fonts (font), table cells (td), and divs (div) inside it.
+line-height: 100%;: This sets the space between lines of text to be normal, without any extra spacing.*/
 		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
          line-height: 100%;
       }
 
+/*a[x-apple-data-detectors=true]: This targets links (a tags) that Apple devices, like iPhones, automatically detect as things like phone numbers or addresses.
+color: inherit !important;: This makes the link use the same color as the text around it.
+text-decoration: inherit !important;: This ensures that the link keeps the same style (like underlining or no underlining) as the text around it. The !important makes sure this rule overrides others.*/
       a[x-apple-data-detectors=true]{
          color: inherit !important;
          text-decoration: inherit !important;
       }
 
+/*.column-wrapper .padding { padding-right: 0 !important; padding-left: 0 !important; }
+
+    For elements inside a .column-wrapper that have the .padding class, the right and left padding (the space inside the element) is set to zero. The !important means this rule overrides any other padding settings.
+
+.column-wrapper { padding: 0 115px !important; }
+
+    The entire .column-wrapper element gets padding of 115 pixels on the right and left, but no padding on the top and bottom.
+
+.column-wrapper .column, .column-wrapper .column img { width: 100% !important; max-width: 100% !important; }
+
+    Any .column inside .column-wrapper, and any images (img) inside those columns, will stretch to take up 100% of the space available. They won’t be wider than the space they’re in.*/
       @media screen and (max-width: 599.98px) {
+         .column-wrapper .padding {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+         }
+         .column-wrapper {
+            padding: 0 115px !important;
+         }
+         .column-wrapper .column,
+         .column-wrapper .column img{
+            width: 100% !important;
+            max-width: 100% !important;
+         }
          
       }
+
+   /*column-wrapper { padding: 0 60px !important; }
+
+    The .column-wrapper element now gets padding of 60 pixels on the right and left, but still no padding on the top and bottom.*/
       @media screen and (max-width: 499.98px) {
+         .column-wrapper {
+            padding: 0 60px !important;
+         }
 
       }
       @media screen and (max-width: 399.98px) {
+         .column-wrapper {
+            padding: 0 25px !important;
+         }
 
       }
 
+/*color-scheme: light dark;: This tells the webpage that it can work in both light mode (bright colors) and dark mode (darker colors).
+supported-color-schemes: light dark;: This is just another way of saying the webpage can handle both light and dark modes.*/   
       :root {
          color-scheme: light dark;
          supported-color-schemes: light dark;
       }
+
+/*@media (prefers-color-scheme: dark): This part checks if the user's device is set to dark mode. If it is, the styles inside this section will apply.
+
+Inside this section:
+
+    body, table, .darkmode-bg { background: #2d2d2d !important; color: #FCF9F5 !important; }
+        This changes the background color of the entire page (body), any tables (table), and anything with the class .darkmode-bg to a dark gray color (#2d2d2d).
+        It also changes the text color to white (#FCF9F5) to make it readable on the dark background.
+        The !important part makes sure these colors are used, even if other styles try to override them.*/
       @media (prefers-color-scheme: dark) {
          body, table, .darkmode-bg {
-            background: #2d2d2d !important;
-            color: #ffffff !important;
+            background: #FCF9F5 !important;
+            color: #44413D !important;
          }
+/*[data-ogsc] body, table, .darkmode-bg { background: #2d2d2d !important; color: #ffffff !important; }
+
+    This does the same thing as the previous rule, but it applies specifically to elements that have a special attribute called data-ogsc.*/
          [data-ogsc] body, table, .darkmode-bg {
-            background: #2d2d2d !important;
-            color: #ffffff !important;
+            background: #FCF9F5 !important;
+            color: #44413D !important;
          }
+
+/*.darkmode-transparent { background-color: transparent !important; }
+
+    Anything with the class .darkmode-transparent gets a see-through (transparent) background in dark mode. This means you can see whatever is behind it.*/
          .darkmode-transparent {
             background-color: transparent !important;
          }
+
+/*[data-ogsc] .darkmode-transparent { background-color: transparent !important; }
+
+    Again, this rule is the same as the previous one, but it applies specifically to elements with the data-ogsc attribute.*/
          [data-ogsc] .darkmode-transparent {
             background-color: transparent !important;
          }
       }
 
       /* ADD @IMPORT GOOGLE FONT HERE */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
    </style>
 
 	<!--[if mso]>
 		<style type="text/css">
-			body {background-color: #666666 !important;}
+			body {background-color: #DAD4CB !important;}
          body, table, td, p, a {font-family: Arial, Helvetica, sans-serif !important;}
          table {border-spacing: 0 !important;border-collapse: collapse !important;}
 		</style>
 	<![endif]-->
 	
 </head>
-<body class="body" xml:lang="en" style="margin:0;padding:0;min-width:100%;background-color:#666666;">
+<!--This code is setting up the main part of a webpage or email. It's making sure there's no extra space around the edges, that the content fills the entire width of the screen, and that the background is a specific gray color. The code also labels this section with the class name "body" and indicates that the content is in English.-->
+<body class="body" xml:lang="en" style="margin:0;padding:0;min-width:100%;background-color:#DAD4CB;">
 
-   <div style="width: 100%; table-layout:fixed; background-color: #666666; color:#3d3d3d; font-family: Arial, Helvetica, sans-serif; font-size: 16px; margin: 0 auto 40px;">
-      <div style="max-width: 600px; background-color: #ffffff; color:#3d3d3d; font-family: Arial, Helvetica, sans-serif; font-size: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);margin: 0 auto;">
+   <!--This code is creating two nested containers. The first one is a full-width section with a gray background and gray text, while the second one inside it is a smaller, centered box with a white background, gray text, and a shadow around it. The text inside both containers uses the Arial or Helvetica fonts and is sized at 16 pixels for readability. This setup is commonly used for making content look nice and clean, especially in emails or web pages.-->
+   <div style="width: 100%; table-layout:fixed; background-color: #DAD4CB; color:#3d3d3d; font-family: Arial, Helvetica, sans-serif; font-size: 16px; margin: 0 auto 40px;">
+      <div style="max-width: 600px; background-color: #FCF9F5; color:#44413D; font-family: Arial, Helvetica, sans-serif; font-size: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, .2);margin: 0 auto;">
 
-         <!-- Preheader (remove comment) -->
-         <div style="font-size: 0px; color: #fafdfe; mso-line-height-rule: exactly; line-height: 0px; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide:all;">
-            This is our preheader text which can be 35-190 characters but 85-100 is recommended.
+         <!-- Preheader (remove comment) This code is used to create a hidden container in an email or webpage. It includes some text and special characters but is styled to be invisible. This technique is often used in emails to include hidden preheader text or other elements that should not be seen but may be used by email clients for various purposes, like improving how the email is displayed or processed.-->
+         <div style="font-size: 0px; color: #FCF9F5; mso-line-height-rule: exactly; line-height: 0px; display: none; max-width: 0px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide:all;">
+            The Outs of Maine Collection. New Arrivals are here. Earn 1 Reward Point for every dollar you spend. Refer a Friend and receive a special discount!
             <!-- Add Preheader Text Here (85-100 characters in length) -->
             &zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;
          </div>
@@ -135,13 +277,28 @@
             <td style="padding:0;">
          <![endif]-->
 
-         <table align="center" style="border-spacing:0; border-collapse: collapse; color:#3d3d3d; font-family: Arial, Helvetica, sans-serif; font-size: 16px; background-color: #ffffff; margin: 0 auto; padding:0; width: 100%; max-width: 600px;" role="presentation">
+         <table align="center" style="border-spacing:0; border-collapse: collapse; color:#3d3d3d; font-family: Arial, Helvetica, sans-serif; font-size: 16px; background-color: #FCF9F5; margin: 0 auto; padding:0; width: 100%; max-width: 600px;" role="presentation">
 
 
-            <h2 style="padding: 20px 0; text-align: center;">This shows the background colors to get started.<br>Remove this heading element.</h2>
+   <!-- START HEADER/LOGO -->
+            <tr>
+               <td style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;" role="presentation">
 
-<!-- ADD YOUR SECTION COMMENTS HERE (I.E "START FIRST TWO COLUMN SECTION")
-   REMOVE THE COMMENTS BEFORE USING A TEMPLATE IN EMAIL. -->
+                     <tr>
+                        <td style="padding: 0; line-height: 0;">
+                           <a href="https://example.com/1" target="_blank">
+                              <img src="https://mcusercontent.com/474f5b70c3b324277323d4c42/images/ce6afb83-a2bc-668d-ff82-fe06e24edf6c.jpg" alt="Kasha Decor" title="Kasha Decor" width="600" style="border: 0; width: 100%;">
+                           </a>
+                        </td>
+                     </tr>
+
+                  </table>
+               </td>
+            </tr>
+
+
+    <!-- END HEADER/LOGO -->
 
 
          </table>
